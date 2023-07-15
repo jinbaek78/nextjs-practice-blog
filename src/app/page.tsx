@@ -1,5 +1,9 @@
-import Image from 'next/image';
+import Avatar from './components/Avatar';
 
 export default function Home() {
-  return <h1>this is a home</h1>;
+  return (
+    <div>
+      <Avatar />
+    </div>
+  );
 }

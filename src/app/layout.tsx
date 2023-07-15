@@ -21,7 +21,7 @@ export default function RootLayout({
         <main className="py-3 px-8">
           <header className="flex w-full justify-between my-2 ">
             <h1 className=" font-bold text-xl">
-              <Link href={'/'}>Jin's blog</Link>
+              <Link href={'/'}>Jin`s blog</Link>
             </h1>
             <nav className="flex justify-around font-semiBold text-xs">
               <Link href={'/'} className=" pr-2">

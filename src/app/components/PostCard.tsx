@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Post } from '../../../service/posts';
+import Link from 'next/link';
 
 type Props = {
   post: Post;
@@ -8,7 +9,10 @@ export default function PostCard({ post }: Props) {
   const { id, createAt, title, subTitle, description, category, images } = post;
 
   return (
-    <div className="flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+    <Link
+      href={`/posts/${id}`}
+      className="flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+    >
       <div className="3">
         <Image src={`/images/${images}`} width={300} height={100} alt="card" />
       </div>
@@ -22,6 +26,6 @@ export default function PostCard({ post }: Props) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

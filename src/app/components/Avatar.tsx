@@ -13,7 +13,7 @@ export default function Avatar({}: Props) {
         height={120}
       />
       <div className="flex flex-col justify-center items-center">
-        <h1 className="font-bold text-lg">Hi, I'm Jin</h1>
+        <h1 className="font-bold text-lg">Hi, I am Jin</h1>
         <h4 className="font-light text-sm">Frontend engineer</h4>
         <h5 className="font-light text-xs">a person who code my dream</h5>
       </div>

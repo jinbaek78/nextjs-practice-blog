@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  width: 100%;
+}
 body {
   color: rgb(var(--foreground-rgb));
+  width: 100%;
 }

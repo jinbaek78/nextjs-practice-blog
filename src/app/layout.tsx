@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="py-3 px-8">
-          <header className="flex w-full justify-between ">
+          <header className="flex w-full justify-between my-2 ">
             <h1 className=" font-bold text-xl">
               <Link href={'/'}>Jin's blog</Link>
             </h1>

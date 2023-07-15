@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-// import GotoContact from './GotoContact';
 
 type Props = {};
 export default function Avatar({}: Props) {

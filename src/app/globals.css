@@ -27,3 +27,33 @@ body {
 .markdown > * {
   all: revert;
 }
+
+.slick-slide {
+  margin: 0 5px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  opacity: 1 !important;
+  font-size: 30px !important;
+}
+
+.slick-prev:before {
+  content: '⬅️' !important;
+}
+
+.slick-next:before {
+  content: '➡️' !important;
+}
+
+.slick-next {
+  right: 25px !important;
+  top: 22% !important;
+}
+
+.slick-prev {
+  left: 15px !important;
+  top: 22% !important;
+  z-index: 1 !important;
+}

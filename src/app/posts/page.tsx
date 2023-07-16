@@ -1,6 +1,5 @@
 import Posts from '@/components/Posts';
 import { getPostDataAll } from '../../../service/posts';
-import PostCard from '../components/PostCard';
 
 type Props = {};
 export default async function page({}: Props) {

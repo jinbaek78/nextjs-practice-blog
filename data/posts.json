@@ -7,7 +7,8 @@
     "description": "it can make you more confident",
     "category": "my story",
     "images": "roadwithsky2.jpeg",
-    "nextId": "2"
+    "nextId": "2",
+    "featured": true
   },
   {
     "id": "2",
@@ -18,7 +19,8 @@
     "category": "my story",
     "images": "roadwithsky2.jpeg",
     "previousId": "1",
-    "nextId": "3"
+    "nextId": "3",
+    "featured": true
   },
   {
     "id": "3",
@@ -29,7 +31,8 @@
     "category": "frontend",
     "images": "roadwithsky2.jpeg",
     "previousId": "2",
-    "nextId": "4"
+    "nextId": "4",
+    "featured": true
   },
   {
     "id": "4",
@@ -40,7 +43,8 @@
     "category": "frontend",
     "images": "roadwithsky2.jpeg",
     "previousId": "3",
-    "nextId": "5"
+    "nextId": "5",
+    "featured": true
   },
   {
     "id": "5",
@@ -51,7 +55,8 @@
     "category": "backend",
     "images": "roadwithsky2.jpeg",
     "previousId": "4",
-    "nextId": "6"
+    "nextId": "6",
+    "featured": true
   },
   {
     "id": "6",
@@ -62,7 +67,8 @@
     "category": "backend",
     "images": "roadwithsky2.jpeg",
     "previousId": "5",
-    "nextId": "7"
+    "nextId": "7",
+    "featured": false
   },
   {
     "id": "7",
@@ -73,7 +79,8 @@
     "category": "my story",
     "images": "roadwithsky2.jpeg",
     "previousId": "6",
-    "nextId": "8"
+    "nextId": "8",
+    "featured": false
   },
   {
     "id": "8",
@@ -84,7 +91,8 @@
     "category": "javascript",
     "images": "roadwithsky2.jpeg",
     "previousId": "7",
-    "nextId": "9"
+    "nextId": "9",
+    "featured": false
   },
   {
     "id": "9",
@@ -95,7 +103,8 @@
     "category": "frontend",
     "images": "roadwithsky2.jpeg",
     "previousId": "8",
-    "nextId": "10"
+    "nextId": "10",
+    "featured": false
   },
   {
     "id": "10",
@@ -106,7 +115,8 @@
     "category": "backend",
     "images": "roadwithsky2.jpeg",
     "previousId": "11",
-    "nextId": "12"
+    "nextId": "12",
+    "featured": false
   },
   {
     "id": "11",
@@ -117,7 +127,8 @@
     "category": "backend",
     "images": "roadwithsky2.jpeg",
     "previousId": "10",
-    "nextId": "12"
+    "nextId": "12",
+    "featured": false
   },
   {
     "id": "12",
@@ -128,7 +139,8 @@
     "category": "my story",
     "images": "roadwithsky2.jpeg",
     "previousId": "11",
-    "nextId": "13"
+    "nextId": "13",
+    "featured": false
   },
   {
     "id": "13",
@@ -139,7 +151,8 @@
     "category": "javascript",
     "images": "roadwithsky2.jpeg",
     "previousId": "12",
-    "nextId": "14"
+    "nextId": "14",
+    "featured": false
   },
   {
     "id": "14",
@@ -150,7 +163,8 @@
     "category": "javascript",
     "images": "roadwithsky2.jpeg",
     "previousId": "13",
-    "nextId": "15"
+    "nextId": "15",
+    "featured": false
   },
   {
     "id": "15",
@@ -160,6 +174,7 @@
     "description": "it can make you more confident",
     "category": "javascript",
     "images": "roadwithsky2.jpeg",
-    "previousId": "14"
+    "previousId": "14",
+    "featured": false
   }
 ]

@@ -11,6 +11,7 @@ export type Post = {
   images: string;
   nextId?: string;
   previousId?: string;
+  featured: boolean;
 };
 
 export async function getPostDataAll(): Promise<Post[]> {

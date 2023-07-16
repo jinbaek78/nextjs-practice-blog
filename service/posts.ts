@@ -11,10 +11,21 @@ export type Post = {
   images: string;
 };
 
-export async function getPosts(): Promise<Post[]> {
+export async function getPostDatasData(): Promise<Post[]> {
   const filePath = path.join(process.cwd(), 'data', 'posts.json');
   const data = await fs.readFile(filePath, 'utf-8');
   return JSON.parse(data);
 }
 
-// get Post
+export async function getPostData(id: string): Promise<Post> {
+  const filePath = path.join(process.cwd(), 'data', 'posts.json');
+  const data = await JSON.parse(await fs.readFile(filePath, 'utf-8'));
+  const found = data.find((post: Post) => post.id === id);
+  return found;
+}
+
+export async function getPost(id: string): Promise<string> {
+  const filePath = path.join(process.cwd(), 'posts', `post${id}.md`);
+  const data = await fs.readFile(filePath, 'utf-8');
+  return data;
+}

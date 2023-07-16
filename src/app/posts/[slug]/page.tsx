@@ -1,6 +1,5 @@
-import { notFound } from 'next/navigation';
-
 import { Post, getPosts } from '../../../../service/posts';
+import NotFound from './not-found';
 
 type Props = {
   params: {
@@ -11,7 +10,7 @@ export default async function page({ params: { slug } }: Props) {
   const postIds = (await getPosts()).map((post) => post.id);
 
   if (!postIds.includes(slug)) {
-    notFound();
+    return <NotFound />;
   }
 
   return <div>pages/ {slug}</div>;

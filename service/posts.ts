@@ -9,9 +9,11 @@ export type Post = {
   description: string;
   category: string;
   images: string;
+  nextId?: string;
+  previousId?: string;
 };
 
-export async function getPostDatasData(): Promise<Post[]> {
+export async function getPostDataAll(): Promise<Post[]> {
   const filePath = path.join(process.cwd(), 'data', 'posts.json');
   const data = await fs.readFile(filePath, 'utf-8');
   return JSON.parse(data);

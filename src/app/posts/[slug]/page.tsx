@@ -3,7 +3,7 @@ import {
   Post,
   getPost,
   getPostData,
-  getPostDatasData,
+  getPostDataAll,
 } from '../../../../service/posts';
 import NotFound from './not-found';
 type Props = {
@@ -12,22 +12,40 @@ type Props = {
   };
 };
 export default async function page({ params: { slug } }: Props) {
-  const postIds = (await getPostDatasData()).map((post) => post.id);
+  const postIds = (await getPostDataAll()).map((post) => post.id);
 
   if (!postIds.includes(slug)) {
     return <NotFound />;
   }
-  // getArticle byId (read the file)
-  //
 
-  const postData = await getPostData(slug);
-  const post = await getPost(slug);
+  const postMetadata = getPostData(slug);
+  const postContent = getPost(slug);
+  const [postData, post] = await Promise.all([postMetadata, postContent]);
 
-  return <PostDetail postData={postData} post={post} />;
+  let nextPostData, previousPostData;
+  if (postData.previousId) {
+    previousPostData = getPostData(postData.previousId);
+  }
+  if (postData.nextId) {
+    nextPostData = getPostData(postData.nextId);
+  }
+  const [previousData, nextData] = await Promise.all([
+    previousPostData,
+    nextPostData,
+  ]);
+
+  return (
+    <PostDetail
+      postData={postData}
+      post={post}
+      previous={previousData}
+      next={nextData}
+    />
+  );
 }
 
 export async function generateStaticParams() {
-  const posts: Post[] = await getPostDatasData();
+  const posts: Post[] = await getPostDataAll();
   return posts.map(({ id }) => ({
     slug: id,
   }));

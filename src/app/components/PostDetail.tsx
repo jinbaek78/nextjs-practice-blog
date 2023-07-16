@@ -2,24 +2,35 @@ import Image from 'next/image';
 import { Post } from '../../../service/posts';
 import { AiTwotoneCalendar } from 'react-icons/ai';
 import Markdown from '@/components/Markdown';
+import BackAndForth from './BackAndForth';
 
 type Props = {
   postData: Post;
   post: string;
+  previous: Post | undefined;
+  next: Post | undefined;
 };
-export default function PostDetail({ postData, post }: Props) {
-  const { id, createAt, title, subTitle, description, category, images } =
-    postData;
-  console.log('post: ', post);
+export default function PostDetail({ postData, post, previous, next }: Props) {
+  const {
+    id,
+    createAt,
+    title,
+    subTitle,
+    description,
+    category,
+    images,
+    nextId,
+    previousId,
+  } = postData;
 
   return (
-    <section className="w-full bg-zinc-100 rounded-lg ">
+    <section className="w-full bg-zinc-100 rounded-md ">
       <Image
         src={`/images/${images}`}
         width={300}
         height={100}
         alt="card"
-        className="w-full h-36 rounded-lg"
+        className="w-full h-36 rounded-md"
       />
 
       <div className="p-2">
@@ -33,6 +44,7 @@ export default function PostDetail({ postData, post }: Props) {
         </div>
         <Markdown post={post} />
       </div>
+      <BackAndForth next={next} previous={previous} />
     </section>
   );
 }

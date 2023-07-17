@@ -1,32 +1,64 @@
 'use client';
 
-import { useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
+import { sendEmail } from '../../service/email';
 
 type Props = {};
 export default function EmailForm({}: Props) {
-  const [email, setEmail] = useState('');
+  const [sender, setSender] = useState('');
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [failureMessage, setFailureMessage] = useState('');
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    sendEmail({
+      email: { sender, message, subject },
+      successCallback: setSuccessMessage,
+      failureCallback: setFailureMessage,
+    });
+  };
+
+  useEffect(() => {
+    if (successMessage) {
+      setTimeout(() => setSuccessMessage(''), 5000);
+      setMessage('');
+      setSubject('');
+      setSender('');
+      return;
+    }
+
+    setTimeout(() => setFailureMessage(''), 6000);
+  }, [successMessage, failureMessage]);
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <h2 className="mb-4 font-semibold ">Or Send me an email</h2>
-      {/* <p className=" bg-green-200 mb-2 text-center px-2 py-1 text-sm">
-        ✅The email has been successfully sent
-      </p>
-      <p className=" bg-red-300 mb-2 px-2 py-1 text-center text-sm">
-        🔥The email delivery failed. Please try again!
-      </p> */}
+      {successMessage && (
+        <p className=" bg-green-200 mb-4 text-center px-2 py-1 text-sm">
+          {successMessage}
+        </p>
+      )}
+      {failureMessage && (
+        <p className=" bg-red-300 mb-4 px-2 py-1 text-center text-sm">
+          {failureMessage}
+        </p>
+      )}
+
       <div className=" w-1/3">
-        <form className="p-2  bg-gray-700 text-white text-xs flex flex-col rounded-md">
-          <label className="m-1" htmlFor="email">
+        <form
+          className="p-2  bg-gray-700 text-white text-xs flex flex-col rounded-md"
+          onSubmit={handleSubmit}
+        >
+          <label className="m-1" htmlFor="sender">
             Your Email
           </label>
           <input
             className="m-1 outline-neutral-500 text-black px-1"
-            id="email"
+            id="sender"
             type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={sender}
+            onChange={(e) => setSender(e.target.value)}
           />
           <label className="m-1" htmlFor="subject">
             Subject

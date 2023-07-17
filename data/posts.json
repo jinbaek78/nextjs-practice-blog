@@ -6,7 +6,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "my story",
-    "images": "roadwithsky2.jpeg",
+    "images": "image1.jpeg",
     "nextId": "2",
     "featured": true
   },
@@ -17,7 +17,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "my story",
-    "images": "roadwithsky2.jpeg",
+    "images": "image2.jpeg",
     "previousId": "1",
     "nextId": "3",
     "featured": true
@@ -29,7 +29,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "frontend",
-    "images": "roadwithsky2.jpeg",
+    "images": "image3.jpeg",
     "previousId": "2",
     "nextId": "4",
     "featured": true
@@ -41,7 +41,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "frontend",
-    "images": "roadwithsky2.jpeg",
+    "images": "image4.jpeg",
     "previousId": "3",
     "nextId": "5",
     "featured": true
@@ -53,7 +53,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "backend",
-    "images": "roadwithsky2.jpeg",
+    "images": "image5.jpeg",
     "previousId": "4",
     "nextId": "6",
     "featured": true
@@ -65,7 +65,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "backend",
-    "images": "roadwithsky2.jpeg",
+    "images": "image6.jpeg",
     "previousId": "5",
     "nextId": "7",
     "featured": false
@@ -77,7 +77,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "my story",
-    "images": "roadwithsky2.jpeg",
+    "images": "image7.jpeg",
     "previousId": "6",
     "nextId": "8",
     "featured": false
@@ -89,7 +89,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "javascript",
-    "images": "roadwithsky2.jpeg",
+    "images": "image8.jpeg",
     "previousId": "7",
     "nextId": "9",
     "featured": false
@@ -101,7 +101,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "frontend",
-    "images": "roadwithsky2.jpeg",
+    "images": "image9.jpeg",
     "previousId": "8",
     "nextId": "10",
     "featured": false
@@ -113,7 +113,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "backend",
-    "images": "roadwithsky2.jpeg",
+    "images": "image10.jpeg",
     "previousId": "11",
     "nextId": "12",
     "featured": false
@@ -125,7 +125,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "backend",
-    "images": "roadwithsky2.jpeg",
+    "images": "image11.jpeg",
     "previousId": "10",
     "nextId": "12",
     "featured": false
@@ -137,7 +137,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "my story",
-    "images": "roadwithsky2.jpeg",
+    "images": "image12.jpeg",
     "previousId": "11",
     "nextId": "13",
     "featured": false
@@ -149,7 +149,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "javascript",
-    "images": "roadwithsky2.jpeg",
+    "images": "image13.jpeg",
     "previousId": "12",
     "nextId": "14",
     "featured": false
@@ -161,7 +161,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "javascript",
-    "images": "roadwithsky2.jpeg",
+    "images": "image14.jpeg",
     "previousId": "13",
     "nextId": "15",
     "featured": false
@@ -173,7 +173,7 @@
     "subTitle": "jest JTL",
     "description": "it can make you more confident",
     "category": "javascript",
-    "images": "roadwithsky2.jpeg",
+    "images": "image15.jpeg",
     "previousId": "14",
     "featured": false
   }

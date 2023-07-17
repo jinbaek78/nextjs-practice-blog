@@ -10,10 +10,13 @@ type Props = {
 export default function BackAndForth({ next, previous }: Props) {
   const hasPrevious = previous !== undefined;
   const hasNextId = next !== undefined;
+  const previousImgeURL = `/images/${previous?.images}`;
+  const nextImgeURL = `/images/${next?.images}`;
   return (
     <div className="w-full h-20 flex  rounded-b-md text-center text-white ">
       <button
-        className="basis-1/2 flex justify-center items-center bg-[url('/images/roadwithsky.jpeg')] rounded-es-md relative  disabled:bg-none disabled:blur-3xl disabled:pointer-events-none"
+        className="basis-1/2 flex justify-center items-center bg-cover bg-center rounded-es-md relative  disabled:bg-none disabled:blur-3xl disabled:pointer-events-none"
+        style={{ backgroundImage: `url(${previousImgeURL})` }}
         disabled={!hasPrevious}
       >
         <Link href={`/posts/${previous?.id}`}>
@@ -25,7 +28,8 @@ export default function BackAndForth({ next, previous }: Props) {
         </Link>
       </button>
       <button
-        className="basis-1/2 flex justify-center items-center bg-[url('/images/roadwithsky.jpeg')] rounded-ee-md relative disabled:bg-none disabled:blur-3xl disabled:pointer-events-none"
+        className="basis-1/2 flex justify-center items-center bg-cover bg-center rounded-ee-md relative disabled:bg-none disabled:blur-3xl disabled:pointer-events-none"
+        style={{ backgroundImage: 'url(' + nextImgeURL + ')' }}
         disabled={!hasNextId}
       >
         <Link href={`/posts/${next?.id}`}>

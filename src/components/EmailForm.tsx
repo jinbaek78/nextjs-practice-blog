@@ -10,6 +10,7 @@ export default function EmailForm({}: Props) {
   const [subject, setSubject] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [failureMessage, setFailureMessage] = useState('');
+  const [IsSent, SetIsSent] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,9 +19,11 @@ export default function EmailForm({}: Props) {
       successCallback: setSuccessMessage,
       failureCallback: setFailureMessage,
     });
+    SetIsSent(true);
   };
 
   useEffect(() => {
+    SetIsSent(false);
     if (successMessage) {
       setTimeout(() => setSuccessMessage(''), 5000);
       setMessage('');
@@ -79,8 +82,12 @@ export default function EmailForm({}: Props) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <button className="bg-yellow-300 text-black m-1" type="submit">
-            Submit
+          <button
+            className="bg-yellow-300 text-black m-1 disabled:bg-sky-200"
+            type="submit"
+            disabled={IsSent}
+          >
+            {IsSent ? 'Sending...' : 'Submit'}
           </button>
         </form>
       </div>

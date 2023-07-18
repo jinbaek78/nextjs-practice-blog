@@ -6,7 +6,7 @@ type Props = {
   post: Post;
 };
 export default function PostCard({ post }: Props) {
-  const { id, createAt, title, subTitle, description, category, images } = post;
+  const { id, createAt, title, description, category, images } = post;
 
   return (
     <Link

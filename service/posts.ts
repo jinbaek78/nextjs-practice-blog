@@ -5,7 +5,6 @@ export type Post = {
   id: string;
   createAt: string;
   title: string;
-  subTitle: string;
   description: string;
   category: string;
   images: string;

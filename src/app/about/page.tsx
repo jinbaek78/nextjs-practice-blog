@@ -9,7 +9,7 @@ export default function page({}: Props) {
         <div className="flex flex-col justify-center items-center my-2">
           <h2>Who am I?</h2>
           <p className="text-[10px]">
-            I'm preparing to be an Frontend engineer
+            I`m preparing to be an Frontend engineer
           </p>
         </div>
         <div className="flex flex-col justify-center items-center my-2">

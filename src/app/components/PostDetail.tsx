@@ -11,17 +11,7 @@ type Props = {
   next: Post | undefined;
 };
 export default function PostDetail({ postData, post, previous, next }: Props) {
-  const {
-    id,
-    createAt,
-    title,
-    subTitle,
-    description,
-    category,
-    images,
-    nextId,
-    previousId,
-  } = postData;
+  const { createAt, title, description, images } = postData;
 
   return (
     <section className="w-full bg-zinc-100 rounded-md ">

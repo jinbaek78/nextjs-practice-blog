@@ -22,11 +22,17 @@ SyntaxHighlighter.registerLanguage('json', json);
 type Props = {
   post: string;
 };
+
+type CodeProps = {
+  node: any;
+  inline: any;
+  className: any;
+};
 export default function Markdown({ post }: Props) {
   const syntaxTheme = oneDark;
 
   const MarkdownComponents: object = {
-    code({ node, inline, className, ...props }) {
+    code({ node, inline, className, ...props }: CodeProps) {
       const hasLang = /language-(\w+)/.exec(className || '');
       const hasMeta = node?.data?.meta;
 
@@ -35,11 +41,11 @@ export default function Markdown({ post }: Props) {
           const RE = /{([\d,-]+)}/;
           const metadata = node.data.meta?.replace(/\s/g, '');
           const strlineNumbers = RE?.test(metadata)
-            ? RE?.exec(metadata)[1]
+            ? RE?.exec(metadata)![1]
             : '0';
           const highlightLines = rangeParser(strlineNumbers);
           const highlight = highlightLines;
-          const data: string = highlight.includes(applyHighlights)
+          const data: string | null = highlight.includes(applyHighlights)
             ? 'highlight'
             : null;
           return { data };

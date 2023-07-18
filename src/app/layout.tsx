@@ -39,7 +39,12 @@ export default function RootLayout({
             </nav>
           </header>
           <main>{children}</main>
-          <footer></footer>
+
+          <footer className="bg-black text-white font text-[6px] p-1 mt-5 text-center relative top-3">
+            <p className="w-full">
+              Don't forgert to CODE your DREAM | All Right Reserved.
+            </p>
+          </footer>
         </main>
       </body>
     </html>

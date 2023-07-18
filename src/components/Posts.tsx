@@ -48,7 +48,7 @@ export default function Posts({ posts }: Props) {
   };
   return (
     <div className="flex">
-      <ul className=" basis-9/12 grid grid-cols-3 gap-2 md:grid-cols-4 lg:grid-cols-5">
+      <ul className=" basis-9/12 grid grid-rows-2 grid-cols-3 gap-2 md:grid-cols-4 lg:grid-cols-5">
         {sortedPosts.map((post) => (
           <PostCard post={post} key={post.id} />
         ))}

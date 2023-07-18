@@ -30,6 +30,7 @@ body {
 
 .slick-slide {
   margin: 0 5px;
+  aspect-ratio: 1.8/1;
 }
 
 .slick-prev:before,
